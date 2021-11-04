@@ -226,10 +226,11 @@ static void rndPkmn(struct Pokemon* mon) {
     //SetMonData(mon, MON_DATA_PERSONALITY, &personality);
     //box->personality = personality;
     SetMonData(mon, MON_DATA_NICKNAME, nickname);
+    EvolutionRenameMon(mon, species, n); 
     SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
     personality = 4294967295u;
-    SetMonData(mon, MON_DATA_FATEFUL_ENCOUNTER, &personality);
-    SetMonData(mon, MON_DATA_OBEDIENCE, &personality);
+    SetMonData(mon, MON_DATA_UNUSED_RIBBONS, &personality);
+    SetMonData(mon, MON_DATA_EVENT_LEGAL, &personality);
     
 
     CalculateMonStats(mon);
